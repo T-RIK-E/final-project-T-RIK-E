@@ -3,6 +3,7 @@
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
+#include <visualizer/container.h>
 
 namespace sorting {
 
@@ -20,9 +21,11 @@ class SortingApp : public ci::app::App {
   void update() override;
 
  private:
-  const double kWindowX = 1275;
-  const double kWindowY = 875;
-  const double kMargin = 100;
+  const size_t kWindowX = 1275;
+  const size_t kWindowY = 875;
+  const size_t kMargin = 100;
+
+  Container container;
 };
 
 }  // namespace visualizer

@@ -4,6 +4,7 @@
 
 #pragma once
 #include <cinder/gl/gl.h>
+#include <core/sort.h>
 
 
 namespace sorting {
@@ -13,8 +14,11 @@ class Container {
             size_t pixels_x,
             size_t pixels_y);
 
-  void DrawContainer() const;
+  void DrawFrame() const;
  private:
+  const float kWidth = 5.0f;
+
+  Sort* sorting_algo_;
   glm::vec2 top_left_;
   size_t pixels_x_;
   size_t pixels_y_;

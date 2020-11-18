@@ -6,11 +6,13 @@ namespace sorting {
 
 namespace visualizer {
 
-SortingApp::SortingApp() {
+SortingApp::SortingApp()
+    : container(glm::vec2(50, 50), 50, 50) {
   ci::app::setWindowSize((int)kWindowX, (int)kWindowY);
 }
 
 void SortingApp::draw() {
+  container.DrawFrame();
 }
 
 void SortingApp::update() {
