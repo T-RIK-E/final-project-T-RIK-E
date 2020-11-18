@@ -3,14 +3,14 @@
 //
 #pragma once
 #include <vector>
+#include <core/sort.h>
 
 namespace sorting {
-class InsertionSort {
+class InsertionSort : public Sort{
  public:
-  void SortOnce() {}
-
+  InsertionSort(std::vector<size_t> unsorted_list);
+  void SortOneStep() override;
  private:
-  std::vector<size_t> unsorted_list;
   size_t i, key, j;
 
 };

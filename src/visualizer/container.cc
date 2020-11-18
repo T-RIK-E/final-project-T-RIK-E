@@ -1,9 +1,11 @@
 #include <visualizer/container.h>
+#include <core/insertion_sort.h>
 
 namespace sorting {
 Container::Container(const glm::vec2 &top_left, size_t pixels_x,
                      size_t pixels_y)
     : top_left_(top_left), pixels_x_(pixels_x), pixels_y_(pixels_y) {
+  sorting_algo_ = &InsertionSort(std::vector<size_t>());
 }
 
 void Container::DrawFrame() const {
