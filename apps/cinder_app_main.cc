@@ -1,10 +1,10 @@
-#include <visualizer/ideal_gas_app.h>
+#include <visualizer/sorting_visualizer_app.h>
 
-using idealgas::visualizer::IdealGasApp;
+using sorting::visualizer::SortingApp;
 
-void prepareSettings(IdealGasApp::Settings* settings) {
+void prepareSettings(SortingApp::Settings* settings) {
   settings->setResizable(false);
 }
 
 // This line is a macro that expands into an "int main()" function.
-CINDER_APP(IdealGasApp, ci::app::RendererGl, prepareSettings);
+CINDER_APP(SortingApp, ci::app::RendererGl, prepareSettings);

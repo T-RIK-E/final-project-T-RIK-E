@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12 FATAL_ERROR)
 set(CMAKE_CXX_STANDARD 11)
-project(ideal-gas)
+project(sorting)
 
 # This tells the compiler to not aggressively optimize and
 # to include debugging information so that the debugger
@@ -50,21 +50,24 @@ get_filename_component(APP_PATH "${CMAKE_CURRENT_SOURCE_DIR}/" ABSOLUTE)
 include("${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake")
 
 list(APPEND CORE_SOURCE_FILES
-        src/core/insertion_sort.cc)
+        src/core/insertion_sort.cc
+        src/core/sort.cc)
 
-list(APPEND SOURCE_FILES    ${CORE_SOURCE_FILES})
+list(APPEND SOURCE_FILES    ${CORE_SOURCE_FILES}
+        src/visualizer/sorting_visualizer_app.cc
+        src/visualizer/container.cc)
 
 list(APPEND TEST_FILES tests/test_main.cc)
 
 ci_make_app(
-        APP_NAME        ideal-gas-sim
+        APP_NAME        sort-app
         CINDER_PATH     ${CINDER_PATH}
         SOURCES         apps/cinder_app_main.cc ${SOURCE_FILES}
         INCLUDES        include
 )
 
 ci_make_app(
-        APP_NAME        ideal-gas-test
+        APP_NAME        sort-test
         CINDER_PATH     ${CINDER_PATH}
         SOURCES         tests/test_main.cc ${SOURCE_FILES} ${TEST_FILES}
         INCLUDES        include
@@ -72,5 +75,5 @@ ci_make_app(
 )
 
 if(MSVC)
-    set_property(TARGET ideal-gas-test APPEND_STRING PROPERTY LINK_FLAGS " /SUBSYSTEM:CONSOLE")
+    set_property(TARGET sort-test APPEND_STRING PROPERTY LINK_FLAGS " /SUBSYSTEM:CONSOLE")
 endif()
