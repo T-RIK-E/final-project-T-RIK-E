@@ -16,10 +16,11 @@ void SortingApp::draw() {
 }
 
 void SortingApp::update() {
+  container.Update();
 }
 
 void SortingApp::cleanup() {
-
+  container.CleanUp();
 }
 
 }  // namespace visualizer

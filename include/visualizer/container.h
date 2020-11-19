@@ -18,7 +18,7 @@ class Container {
   void Update();
   void CleanUp();
  private:
-  const float kWidth = 5.0f;
+  const float kWidth = 10.0f;
 
   Sort* sorting_algo_;
   glm::vec2 top_left_;

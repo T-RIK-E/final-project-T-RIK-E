@@ -9,8 +9,8 @@ Container::Container(const glm::vec2 &top_left, size_t pixels_x,
     : top_left_(top_left), pixels_x_(pixels_x), pixels_y_(pixels_y) {
 
   std::vector<size_t> list;
-  list.reserve(3);
-  for (size_t i = 0; i<3; i++) {
+  list.reserve(100);
+  for (size_t i = 0; i<100; i++) {
     list.push_back(i);
   }
 
@@ -25,10 +25,15 @@ void Container::DrawFrame() const {
   ci::gl::drawSolidRect(
       ci::Rectf(top_left_, top_left_ + glm::vec2(pixels_x_, pixels_y_)));
 
+  size_t width = 0;
   for (size_t height : sorting_algo_->GetUnsortedList()) {
-    glm::vec2 top_left = top_left_ + glm::vec2(0, pixels_y_ - height);
+    glm::vec2 top_left = top_left_ + glm::vec2(width, 0) + glm::vec2(0, pixels_y_ - height);
 
-    top_left += glm::vec2(10, 0);
+    ci::gl::color(ci::Color("black"));
+    ci::gl::drawSolidRect(
+        ci::Rectf(top_left, top_left + glm::vec2(kWidth, height)));
+
+    width += 10;
   }
 }
 
