@@ -9,12 +9,15 @@ namespace sorting {
 class Sort {
  public:
   Sort(std::vector<size_t> unsorted_list);
-  virtual void SortOneStep() = 0;
   virtual ~Sort();
+  virtual void SortOneStep() = 0;
+
   const std::vector<size_t>& GetUnsortedList() const;
+  const size_t GetHeight1() const;
+  const size_t GetHeight2() const;
  protected:
   std::vector<size_t> unsorted_list_;
-  size_t first_;
-  size_t second_;
+  size_t height1_;
+  size_t height2_;
 };
 }
