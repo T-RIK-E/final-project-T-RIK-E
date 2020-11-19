@@ -57,7 +57,8 @@ list(APPEND SOURCE_FILES    ${CORE_SOURCE_FILES}
         src/visualizer/sorting_visualizer_app.cc
         src/visualizer/container.cc)
 
-list(APPEND TEST_FILES tests/test_main.cc)
+list(APPEND TEST_FILES tests/test_main.cc
+        tests/test_insertion_sort.cc)
 
 ci_make_app(
         APP_NAME        sort-app

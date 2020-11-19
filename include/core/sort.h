@@ -13,5 +13,7 @@ class Sort {
   const std::vector<size_t>& GetUnsortedList() const;
  protected:
   std::vector<size_t> unsorted_list_;
+  size_t first_;
+  size_t second_;
 };
 }
