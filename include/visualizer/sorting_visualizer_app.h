@@ -19,6 +19,7 @@ class SortingApp : public ci::app::App {
 
   void draw() override;
   void update() override;
+  void cleanup() override;
 
  private:
   const size_t kWindowX = 1275;

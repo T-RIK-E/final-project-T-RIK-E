@@ -15,6 +15,8 @@ class Container {
             size_t pixels_y);
 
   void DrawFrame() const;
+  void Update();
+  void CleanUp();
  private:
   const float kWidth = 5.0f;
 

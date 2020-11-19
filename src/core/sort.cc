@@ -9,4 +9,6 @@ Sort::Sort(std::vector<size_t> unsorted_list)
 const std::vector<size_t>& Sort::GetUnsortedList() const {
   return unsorted_list_;
 }
+
+Sort::~Sort() = default;
 }  // namespace sorting

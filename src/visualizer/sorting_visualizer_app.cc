@@ -7,7 +7,7 @@ namespace sorting {
 namespace visualizer {
 
 SortingApp::SortingApp()
-    : container(glm::vec2(50, 50), 50, 50) {
+    : container(glm::vec2(0, 0), kWindowX, kWindowY) {
   ci::app::setWindowSize((int)kWindowX, (int)kWindowY);
 }
 
@@ -16,6 +16,10 @@ void SortingApp::draw() {
 }
 
 void SortingApp::update() {
+}
+
+void SortingApp::cleanup() {
+
 }
 
 }  // namespace visualizer
