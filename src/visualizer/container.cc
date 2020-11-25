@@ -1,5 +1,6 @@
 #include <core/insertion_sort.h>
 #include <core/selection_sort.h>
+#include <core/bubble_sort.h>
 #include <visualizer/container.h>
 
 #include <algorithm>
@@ -18,7 +19,7 @@ Container::Container(const glm::vec2 &top_left, size_t pixels_x,
   auto rng = std::default_random_engine{};
   std::shuffle(std::begin(list), std::end(list), rng);
 
-  sorting_algo_ = new SelectionSort(list);
+  sorting_algo_ = new BubbleSort(list);
 }
 
 void Container::DrawFrame() const {

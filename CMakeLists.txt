@@ -52,7 +52,8 @@ include("${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake")
 list(APPEND CORE_SOURCE_FILES
         src/core/sort.cc
         src/core/insertion_sort.cc
-        src/core/selection_sort.cc)
+        src/core/selection_sort.cc
+        src/core/bubble_sort.cc)
 
 list(APPEND SOURCE_FILES    ${CORE_SOURCE_FILES}
         src/visualizer/sorting_visualizer_app.cc

@@ -4,8 +4,6 @@
 
 #include <core/selection_sort.h>
 
-#include <utility>
-
 namespace sorting {
 SelectionSort::SelectionSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
