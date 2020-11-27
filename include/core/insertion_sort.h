@@ -10,6 +10,6 @@ class InsertionSort : public Sort{
   explicit InsertionSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:
-  int i_, key_, j_;
+  int i_, j_;
 };
 }
