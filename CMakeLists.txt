@@ -54,7 +54,8 @@ list(APPEND CORE_SOURCE_FILES
         src/core/insertion_sort.cc
         src/core/selection_sort.cc
         src/core/bubble_sort.cc
-        src/core/quick_sort.cc)
+        src/core/quick_sort.cc
+        src/core/merge_sort.cc)
 
 list(APPEND SOURCE_FILES    ${CORE_SOURCE_FILES}
         src/visualizer/sorting_visualizer_app.cc
