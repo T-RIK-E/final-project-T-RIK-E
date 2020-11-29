@@ -13,11 +13,12 @@ class MergeSort : public Sort {
  public:
   explicit MergeSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
-
  private:
-  std::queue<vector<size_t>> smaller_arrays;
-  vector<size_t> MergeArrays(const vector<size_t>& arr1,
-                            const vector<size_t>& arr2);
+  std::queue<size_t> indexes_;
+  bool sorted_;
+  vector<size_t> left_, right_;
+  size_t i_, j_, k_;
+  void Merge();
   void SplitArray();
 };
 }  // namespace sorting
