@@ -8,3 +8,5 @@
 #include <core/bubble_sort.h>
 #include <core/merge_sort.h>
 #include <core/quick_sort.h>
+#include <core/heap_sort.h>
+#include <core/counting_sort.h>
