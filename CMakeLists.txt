@@ -59,7 +59,8 @@ list(APPEND CORE_SOURCE_FILES
 
 list(APPEND SOURCE_FILES    ${CORE_SOURCE_FILES}
         src/visualizer/sorting_visualizer_app.cc
-        src/visualizer/container.cc)
+        src/visualizer/container.cc
+        src/visualizer/algorithms.cc)
 
 list(APPEND TEST_FILES tests/test_main.cc
         tests/test_insertion_sort.cc)

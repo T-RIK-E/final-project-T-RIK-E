@@ -1,4 +1,4 @@
-#include <core/merge_sort.h>
+#include <visualizer/algorithms.h>
 #include <visualizer/container.h>
 
 #include <algorithm>
