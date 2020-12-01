@@ -10,5 +10,9 @@ class CountingSort : public Sort {
   explicit CountingSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:
+  std::vector<size_t> count_;
+  std::vector<size_t> output_;
+  size_t max_;
+  int i_, j_, k_, l_, m_;
 };
 }
