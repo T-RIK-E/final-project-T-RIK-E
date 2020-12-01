@@ -44,6 +44,8 @@ void QuickSort::SortOneStep() {
 
 bool QuickSort::partition() {
   if (j_ <= high_ - 1) {
+    height1_ = unsorted_list_[j_];
+    height2_ = unsorted_list_[high_];
     if (unsorted_list_[j_] <= unsorted_list_[high_]) {
       i_++;
       swap(unsorted_list_[i_], unsorted_list_[j_]);

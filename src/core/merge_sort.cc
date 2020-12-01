@@ -40,10 +40,14 @@ void MergeSort::Merge() {
   if (i_ == left_.size() && j_ == right_.size()) {
     sorted_ = true;
   } else if (i_ == left_.size()) {
+    height2_ = right_[j_];
     unsorted_list_[k_++] = right_[j_++];
   } else if (j_ == right_.size()) {
+    height1_ = left_[i_];
     unsorted_list_[k_++] = left_[i_++];
   } else if (left_[i_] < right_[j_]) {
+    height1_ = left_[i_];
+    height2_ = right_[j_];
     unsorted_list_[k_++] = left_[i_++];
   } else {
     unsorted_list_[k_++] = right_[j_++];
