@@ -57,7 +57,9 @@ list(APPEND CORE_SOURCE_FILES
         src/core/quick_sort.cc
         src/core/merge_sort.cc
         src/core/heap_sort.cc
-        src/core/counting_sort.cc)
+        src/core/counting_sort.cc
+        src/core/radix_sort.cc
+        src/core/comb_sort.cc)
 
 list(APPEND SOURCE_FILES    ${CORE_SOURCE_FILES}
         src/visualizer/sorting_visualizer_app.cc

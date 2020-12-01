@@ -10,3 +10,5 @@
 #include <core/quick_sort.h>
 #include <core/heap_sort.h>
 #include <core/counting_sort.h>
+#include <core/radix_sort.h>
+#include <core/comb_sort.h>
