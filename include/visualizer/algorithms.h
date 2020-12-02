@@ -12,3 +12,4 @@
 #include <core/counting_sort.h>
 #include <core/radix_sort.h>
 #include <core/comb_sort.h>
+#include <core/shell_sort.h>
