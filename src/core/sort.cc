@@ -20,6 +20,10 @@ const size_t Sort::GetHeight2() const {
   return height2_;
 }
 
+const std::string Sort::GetName() const {
+  return name_;
+}
+
 void Sort::swap(size_t& a, size_t& b) {
   size_t temp = a;
   a = b;

@@ -3,6 +3,7 @@
 namespace sorting {
 ShellSort::ShellSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
+  name_ = "Shell Sort";
   gap_ = unsorted_list_.size()/2;
   i_ = gap_;
   j_ = i_ - gap_;

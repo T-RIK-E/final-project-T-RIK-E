@@ -24,5 +24,8 @@ class Container {
   glm::vec2 top_left_;
   size_t pixels_x_;
   size_t pixels_y_;
+
+  void DrawList() const;
+  void PrintName() const;
 };
 }  // namespace sorting

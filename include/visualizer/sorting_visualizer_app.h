@@ -20,10 +20,13 @@ class SortingApp : public ci::app::App {
   void draw() override;
   void update() override;
   void cleanup() override;
+  void keyDown(ci::app::KeyEvent event) override;
 
  private:
-  const size_t kWindowX = 1275;
+  const size_t kWindowX = 1000;
   const size_t kWindowY = 875;
+  const size_t kContainerX = 1000;
+  const size_t kContainerY = 875;
   const size_t kMargin = 100;
 
   Container container;
