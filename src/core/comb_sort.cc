@@ -3,6 +3,7 @@
 namespace sorting {
 CombSort::CombSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
+  name_ = "Comb Sort";
   gap_ = unsorted_list_.size();
   swapped_ = false;
   go_ = true;

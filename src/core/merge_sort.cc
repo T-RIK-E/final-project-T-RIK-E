@@ -5,6 +5,7 @@
 namespace sorting {
 MergeSort::MergeSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
+  name_ = "Merge Sort";
   SplitArray();
   sorted_ = true;
 }

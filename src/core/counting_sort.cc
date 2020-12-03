@@ -3,6 +3,7 @@
 namespace sorting {
 CountingSort::CountingSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
+  name_ = "Counting Sort";
   max_ = unsorted_list_[0];
   output_.resize(unsorted_list_.size());
   count_.resize(100);

@@ -3,6 +3,7 @@
 namespace sorting {
 HeapSort::HeapSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
+  name_ = "Heap Sort";
   i_ = unsorted_list_.size() / 2 - 1;
   stack_.push(i_--);
   stack_.push(unsorted_list_.size());;

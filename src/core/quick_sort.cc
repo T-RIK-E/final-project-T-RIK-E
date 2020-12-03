@@ -3,6 +3,7 @@
 namespace sorting {
 QuickSort::QuickSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
+  name_ = "Quick Sort";
   partitioned_ = false;
   go_ = true;
   low_ = 0;

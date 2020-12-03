@@ -3,6 +3,7 @@
 namespace sorting {
 BubbleSort::BubbleSort(std::vector<size_t> unsorted_list) :
       Sort(std::move(unsorted_list)) {
+  name_ = "Bubble Sort";
   i_ = 0;
   j_ = 0;
 }
