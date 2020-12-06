@@ -8,6 +8,7 @@
 namespace sorting {
 class BubbleSort : public Sort {
  public:
+  BubbleSort() = default;
   explicit BubbleSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:

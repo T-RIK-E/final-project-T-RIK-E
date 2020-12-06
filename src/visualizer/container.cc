@@ -1,23 +1,11 @@
 #include <visualizer/algorithms.h>
 #include <visualizer/container.h>
 
-#include <algorithm>
-#include <random>
-
 namespace sorting {
 Container::Container(const glm::vec2 &top_left, size_t pixels_x,
                      size_t pixels_y)
     : top_left_(top_left), pixels_x_(pixels_x), pixels_y_(pixels_y) {
-  std::vector<size_t> list;
-  list.reserve(100);
-  for (size_t i = 0; i < 100; i++) {
-    list.push_back(i);
-  }
-
-  auto rng = std::default_random_engine{};
-  std::shuffle(std::begin(list), std::end(list), rng);
-
-  sorting_algo_ = new ShellSort(list);
+  sorting_algo_ = new BubbleSort();
 }
 
 void Container::DrawFrame() const {

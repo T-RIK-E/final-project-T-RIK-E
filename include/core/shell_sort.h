@@ -8,7 +8,8 @@
 namespace sorting {
 class ShellSort : public Sort {
  public:
-  ShellSort(std::vector<size_t> unsorted_list);
+  ShellSort() = default;
+  explicit ShellSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:
   int gap_, i_, j_;

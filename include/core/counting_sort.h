@@ -7,6 +7,7 @@
 namespace sorting {
 class CountingSort : public Sort {
  public:
+  CountingSort() = default;
   explicit CountingSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:

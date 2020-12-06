@@ -8,7 +8,8 @@
 namespace sorting {
 class Sort {
  public:
-  Sort(std::vector<size_t> unsorted_list);
+  Sort();
+  explicit Sort(std::vector<size_t> unsorted_list);
   virtual ~Sort();
   virtual void SortOneStep() = 0;
 

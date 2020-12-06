@@ -11,6 +11,7 @@ using std::vector;
 namespace sorting {
 class MergeSort : public Sort {
  public:
+  MergeSort() = default;
   explicit MergeSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:

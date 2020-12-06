@@ -1,8 +1,20 @@
 #include <core/sort.h>
 
 #include <utility>
+#include <random>
+#include <algorithm>
 
 namespace sorting {
+Sort::Sort() {
+  unsorted_list_.reserve(100);
+  for (size_t i = 0; i < 100; i++) {
+    unsorted_list_.push_back(i);
+  }
+
+  auto rng = std::default_random_engine{};
+  std::shuffle(std::begin(unsorted_list_), std::end(unsorted_list_), rng);
+}
+
 Sort::Sort(std::vector<size_t> unsorted_list)
     : unsorted_list_(std::move(unsorted_list)) {}
 

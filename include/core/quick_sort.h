@@ -9,6 +9,7 @@
 namespace sorting {
 class QuickSort : public Sort {
  public:
+  QuickSort() = default;
   explicit QuickSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:

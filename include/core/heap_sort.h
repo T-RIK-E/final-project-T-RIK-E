@@ -9,7 +9,8 @@
 namespace sorting {
 class HeapSort : public Sort {
  public:
-  HeapSort(std::vector<size_t> unsorted_list);
+  HeapSort() = default;
+  explicit HeapSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:
   std::stack<size_t> stack_;
