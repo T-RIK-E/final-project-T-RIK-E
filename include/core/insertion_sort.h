@@ -7,7 +7,7 @@
 namespace sorting {
 class InsertionSort : public Sort{
  public:
-  InsertionSort() = default;
+  InsertionSort();
   explicit InsertionSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:

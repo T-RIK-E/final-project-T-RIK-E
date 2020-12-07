@@ -26,8 +26,10 @@ void SortingApp::cleanup() {
 void SortingApp::keyDown(ci::app::KeyEvent event) {
   switch (event.getCode()) {
     case ci::app::KeyEvent::KEY_LEFT:
+      container.Decrement();
       break;
     case ci::app::KeyEvent::KEY_RIGHT:
+      container.Increment();
       break;
   }
 }

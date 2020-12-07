@@ -8,7 +8,7 @@
 namespace sorting {
 class SelectionSort : public Sort {
  public:
-  SelectionSort() = default;
+  SelectionSort();
   explicit SelectionSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:

@@ -8,7 +8,6 @@
 namespace sorting {
 class Sort {
  public:
-  Sort();
   explicit Sort(std::vector<size_t> unsorted_list);
   virtual ~Sort();
   virtual void SortOneStep() = 0;
@@ -19,6 +18,7 @@ class Sort {
   const std::string GetName() const;
  protected:
   void swap(size_t& a, size_t& b);
+  std::vector<size_t> GenerateList();
 
   std::vector<size_t> unsorted_list_;
   size_t height1_;

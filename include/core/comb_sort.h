@@ -8,7 +8,7 @@
 namespace sorting {
 class CombSort : public Sort {
  public:
-  CombSort() = default;
+  CombSort();
   explicit CombSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
  private:

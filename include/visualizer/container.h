@@ -5,6 +5,7 @@
 #pragma once
 #include <cinder/gl/gl.h>
 #include <core/sort.h>
+#include <list>
 
 
 namespace sorting {
@@ -17,15 +18,18 @@ class Container {
   void DrawFrame() const;
   void Update();
   void CleanUp();
+  void Decrement();
+  void Increment();
  private:
   const float kWidth = 10.0f;
-
-  Sort* sorting_algo_;
+  std::list<Sort*> sort_list_;
+  std::list<Sort*>::iterator it;
   glm::vec2 top_left_;
   size_t pixels_x_;
   size_t pixels_y_;
 
   void DrawList() const;
   void PrintName() const;
+  void InitializeList();
 };
 }  // namespace sorting
