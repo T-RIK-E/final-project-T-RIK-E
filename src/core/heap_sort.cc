@@ -40,6 +40,7 @@ bool HeapSort::Heapify() {
   // If left child is larger than root
   if (index_ < heap_size_ &&
       unsorted_list_[index_] > unsorted_list_[largest_]) {
+    access_+=2;
     height1_ = unsorted_list_[index_];
     height2_ = unsorted_list_[largest_];
     largest_ = index_;

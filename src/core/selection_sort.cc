@@ -21,14 +21,12 @@ void SelectionSort::SortOneStep() {
     if (j_ < static_cast<int>(unsorted_list_.size())) {
       height2_ = unsorted_list_[j_];
       if (unsorted_list_[j_] < unsorted_list_[min_idx_]) {
+        access_+=2;
         min_idx_ = j_;
       }
       j_++;
     } else {
-      int temp = unsorted_list_[i_];
-      unsorted_list_[i_] = unsorted_list_[min_idx_];
-      unsorted_list_[min_idx_] = temp;
-
+      swap(unsorted_list_[i_], unsorted_list_[min_idx_]);
       i_++;
       min_idx_ = i_;
       j_ = i_ + 1;

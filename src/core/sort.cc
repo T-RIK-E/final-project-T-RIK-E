@@ -30,6 +30,7 @@ void Sort::swap(size_t& a, size_t& b) {
   size_t temp = a;
   a = b;
   b = temp;
+  access_+=2;
 }
 
 std::vector<size_t> Sort::GenerateList() {

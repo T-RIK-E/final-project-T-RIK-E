@@ -13,6 +13,7 @@ void ShellSort::SortOneStep() {
   if (gap_ > 0) {
     if (i_ < UpperBound(gap_)) {
       if (j_ >= 0 && unsorted_list_[j_] > unsorted_list_[j_ + gap_]) {
+        access_+=2;
         swap(unsorted_list_[j_ + gap_], unsorted_list_[j_]);
         height1_ = unsorted_list_[j_ + gap_];
         height2_ = unsorted_list_[j_];

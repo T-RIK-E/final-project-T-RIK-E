@@ -16,10 +16,9 @@ void BubbleSort::SortOneStep() {
       height1_ = unsorted_list_[j_];
       height2_ = unsorted_list_[j_+1];
       if (unsorted_list_[j_] > unsorted_list_[j_+1]) {
-        int temp = unsorted_list_[j_];
-        unsorted_list_[j_] = unsorted_list_[j_+1];
-        unsorted_list_[j_ + 1] = temp;
+        swap(unsorted_list_[j_], unsorted_list_[j_+1]);
       }
+      access_ += 2;
       j_++;
     } else {
       i_++;

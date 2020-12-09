@@ -48,6 +48,7 @@ bool QuickSort::partition() {
     height1_ = unsorted_list_[j_];
     height2_ = unsorted_list_[high_];
     if (unsorted_list_[j_] <= unsorted_list_[high_]) {
+      access_+=2;
       i_++;
       swap(unsorted_list_[i_], unsorted_list_[j_]);
     }

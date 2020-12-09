@@ -28,6 +28,7 @@ void CombSort::SortOneStep() {
         swap(unsorted_list_[i_], unsorted_list_[i_+gap_]);
         swapped_ = true;
       }
+      access_ += 2;
       i_++;
     } else if (gap_ == 1 && !swapped_) {
       go_ = false;

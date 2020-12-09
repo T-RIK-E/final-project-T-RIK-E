@@ -24,9 +24,11 @@ void MergeSort::SortOneStep() {
 
     for (size_t i = 0; i < left_.size(); i++) {
       left_[i] = unsorted_list_[low + i];
+      access_++;
     }
     for (size_t i = 0; i < right_.size(); i++) {
       right_[i] = unsorted_list_[mid + 1 + i];
+      access_++;
     }
     i_ = 0;
     j_ = 0;
@@ -53,6 +55,7 @@ void MergeSort::Merge() {
   } else {
     unsorted_list_[k_++] = right_[j_++];
   }
+  access_++;
 }
 
 void MergeSort::SplitArray() {
