@@ -25,11 +25,15 @@ class SortingApp : public ci::app::App {
  private:
   const size_t kWindowX = 1000;
   const size_t kWindowY = 875;
-  const size_t kContainerX = 1000;
-  const size_t kContainerY = 875;
-  const size_t kMargin = 100;
+  const float kWidth = 10.0f;
 
-  Container container;
+  std::list<Sort*> sort_list_;
+  std::list<Sort*>::iterator it;
+  glm::vec2 top_left_;
+
+  void DrawList() const;
+  void PrintName() const;
+  void InitializeList();
 };
 
 }  // namespace visualizer

@@ -23,6 +23,7 @@ class Sort {
   std::vector<size_t> unsorted_list_;
   size_t height1_;
   size_t height2_;
+  size_t swaps_;
   std::string name_;
 };
-}
+} // namespace sorting
