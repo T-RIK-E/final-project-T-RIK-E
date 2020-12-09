@@ -3,7 +3,7 @@
 #include <cinder/app/App.h>
 #include <cinder/app/RendererGl.h>
 #include <cinder/gl/gl.h>
-#include <visualizer/container.h>
+#include <visualizer/algorithms.h>
 
 namespace sorting {
 

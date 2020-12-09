@@ -1,6 +1,5 @@
 #include <cinder/gl/gl.h>
 #include <visualizer/sorting_visualizer_app.h>
-#include <visualizer/algorithms.h>
 #include <algorithm>
 #include <random>
 
@@ -86,7 +85,7 @@ void SortingApp::keyDown(ci::app::KeyEvent event) {
       }
       break;
     case ci::app::KeyEvent::KEY_RIGHT:
-      if (it != sort_list_.end()) {
+      if (it != --sort_list_.end()) {
         it++;
       }
       break;

@@ -6,7 +6,7 @@
 
 namespace sorting {
 Sort::Sort(std::vector<size_t> unsorted_list)
-    : unsorted_list_(std::move(unsorted_list)) {}
+    : unsorted_list_(std::move(unsorted_list)), access_(0) {}
 
 Sort::~Sort() = default;
 
