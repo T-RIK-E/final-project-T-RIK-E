@@ -1,6 +1,13 @@
 #include <core/shell_sort.h>
 
 namespace sorting {
+ShellSort::ShellSort() : Sort() {
+  name_ = "Shell Sort";
+  gap_ = unsorted_list_.size()/2;
+  i_ = gap_;
+  j_ = i_ - gap_;
+}
+
 ShellSort::ShellSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
   name_ = "Shell Sort";

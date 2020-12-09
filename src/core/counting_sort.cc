@@ -1,6 +1,18 @@
 #include <core/counting_sort.h>
 
 namespace sorting {
+CountingSort::CountingSort() : Sort() {
+  name_ = "Counting Sort";
+  max_ = unsorted_list_[0];
+  access_ = 1;
+  output_.resize(unsorted_list_.size());
+  count_.resize(100);
+  i_ = 0;
+  j_ = 0;
+  k_ = 1;
+  l_ = unsorted_list_.size()-1;
+  m_ = 0;
+}
 CountingSort::CountingSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
   name_ = "Counting Sort";

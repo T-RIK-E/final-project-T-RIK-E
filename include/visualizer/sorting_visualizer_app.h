@@ -27,9 +27,12 @@ class SortingApp : public ci::app::App {
   const size_t kWindowY = 875;
   const float kWidth = 10.0f;
 
+  const std::string kAccess = "Array Access: ";
+
   std::list<Sort*> sort_list_;
-  std::list<Sort*>::iterator it;
+  std::list<Sort*>::iterator it_;
   glm::vec2 top_left_;
+  bool stopped_;
 
   void DrawList() const;
   void PrintName() const;

@@ -1,6 +1,12 @@
 #include <core/bubble_sort.h>
 
 namespace sorting {
+BubbleSort::BubbleSort() : Sort() {
+  name_ = "Bubble Sort";
+  i_ = 0;
+  j_ = 0;
+}
+
 BubbleSort::BubbleSort(std::vector<size_t> unsorted_list) :
       Sort(std::move(unsorted_list)) {
   name_ = "Bubble Sort";

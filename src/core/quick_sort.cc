@@ -1,6 +1,16 @@
 #include <core/quick_sort.h>
 
 namespace sorting {
+QuickSort::QuickSort() : Sort() {
+  name_ = "Quick Sort";
+  partitioned_ = false;
+  go_ = true;
+  low_ = 0;
+  high_ = unsorted_list_.size() -1;
+  stack_.push(low_);
+  stack_.push(high_);
+}
+
 QuickSort::QuickSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
   name_ = "Quick Sort";

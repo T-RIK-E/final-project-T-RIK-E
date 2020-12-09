@@ -3,6 +3,12 @@
 #include <algorithm>
 
 namespace sorting {
+MergeSort::MergeSort() : Sort() {
+  name_ = "Merge Sort";
+  SplitArray();
+  sorted_ = true;
+}
+
 MergeSort::MergeSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
   name_ = "Merge Sort";

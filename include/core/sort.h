@@ -8,17 +8,20 @@
 namespace sorting {
 class Sort {
  public:
+  Sort();
   explicit Sort(std::vector<size_t> unsorted_list);
   virtual ~Sort();
   virtual void SortOneStep() = 0;
+  virtual void ReInitialize() = 0;
 
   const std::vector<size_t>& GetUnsortedList() const;
   const size_t GetHeight1() const;
   const size_t GetHeight2() const;
   const std::string GetName() const;
+  const size_t GetAccess() const;
+  void GenerateList();
  protected:
   void swap(size_t& a, size_t& b);
-  std::vector<size_t> GenerateList();
 
   std::vector<size_t> unsorted_list_;
   size_t height1_;

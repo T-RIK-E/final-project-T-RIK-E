@@ -5,6 +5,12 @@
 #include <core/selection_sort.h>
 
 namespace sorting {
+SelectionSort::SelectionSort() : Sort() {
+  name_ = "Selection Sort";
+  i_ = 0;
+  min_idx_ = i_;
+  j_ = i_ + 1;
+}
 SelectionSort::SelectionSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
   name_ = "Selection Sort";

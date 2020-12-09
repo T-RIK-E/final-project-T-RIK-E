@@ -1,6 +1,13 @@
 #include <core/comb_sort.h>
 
 namespace sorting {
+CombSort::CombSort() : Sort(){
+  name_ = "Comb Sort";
+  gap_ = unsorted_list_.size();
+  swapped_ = false;
+  go_ = true;
+  i_ = 0;
+}
 CombSort::CombSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
   name_ = "Comb Sort";

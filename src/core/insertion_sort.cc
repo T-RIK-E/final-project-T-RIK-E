@@ -3,6 +3,11 @@
 #include <utility>
 
 namespace sorting {
+InsertionSort::InsertionSort() : Sort() {
+  name_ = "Insertion Sort";
+  i_ = 1;
+  j_ = i_ - 1;
+}
 InsertionSort::InsertionSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
   name_ = "Insertion Sort";
