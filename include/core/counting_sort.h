@@ -10,6 +10,7 @@ class CountingSort : public Sort {
   CountingSort();
   explicit CountingSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
+  void ReInitialize() override;
  private:
   std::vector<size_t> count_;
   std::vector<size_t> output_;

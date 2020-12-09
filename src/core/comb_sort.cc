@@ -47,6 +47,15 @@ void CombSort::SortOneStep() {
   }
 }
 
+void CombSort::ReInitialize() {
+  auto rng = std::default_random_engine{};
+  std::shuffle(std::begin(unsorted_list_), std::end(unsorted_list_), rng);
+  gap_ = unsorted_list_.size();
+  swapped_ = false;
+  go_ = true;
+  i_ = 0;
+}
+
 void CombSort::GetNextGap() {
   gap_ = (gap_*10)/13;
 

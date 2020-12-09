@@ -36,6 +36,14 @@ void ShellSort::SortOneStep() {
   }
 }
 
+void ShellSort::ReInitialize() {
+  auto rng = std::default_random_engine{};
+  std::shuffle(std::begin(unsorted_list_), std::end(unsorted_list_), rng);
+  gap_ = unsorted_list_.size()/2;
+  i_ = gap_;
+  j_ = i_ - gap_;
+}
+
 int ShellSort::UpperBound(size_t num) {
   while (num + gap_ <= unsorted_list_.size()) {
     num += gap_;

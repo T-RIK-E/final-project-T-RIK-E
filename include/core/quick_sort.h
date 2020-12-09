@@ -12,6 +12,7 @@ class QuickSort : public Sort {
   QuickSort();
   explicit QuickSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
+  void ReInitialize() override;
  private:
   bool partition();
   int high_, low_, pivot_;

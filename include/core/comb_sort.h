@@ -11,6 +11,7 @@ class CombSort : public Sort {
   CombSort();
   explicit CombSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
+  void ReInitialize() override;
  private:
   size_t gap_;
   size_t i_;

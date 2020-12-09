@@ -14,6 +14,7 @@ class MergeSort : public Sort {
   MergeSort();
   explicit MergeSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
+  void ReInitialize() override;
  private:
   std::queue<size_t> indexes_;
   bool sorted_;

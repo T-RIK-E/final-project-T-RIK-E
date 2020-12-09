@@ -29,4 +29,11 @@ void InsertionSort::SortOneStep() {
     }
   }
 }
+
+void InsertionSort::ReInitialize() {
+  auto rng = std::default_random_engine{};
+  std::shuffle(std::begin(unsorted_list_), std::end(unsorted_list_), rng);
+  i_ = 1;
+  j_ = i_ - 1;
+}
 }  // namespace sorting

@@ -32,4 +32,11 @@ void BubbleSort::SortOneStep() {
     }
   }
 }
+
+void BubbleSort::ReInitialize() {
+  auto rng = std::default_random_engine{};
+  std::shuffle(std::begin(unsorted_list_), std::end(unsorted_list_), rng);
+  i_ = 0;
+  j_ = 0;
 }
+} // namespace sorting

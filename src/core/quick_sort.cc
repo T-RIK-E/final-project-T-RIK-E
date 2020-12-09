@@ -53,6 +53,17 @@ void QuickSort::SortOneStep() {
   }
 }
 
+void QuickSort::ReInitialize() {
+  auto rng = std::default_random_engine{};
+  std::shuffle(std::begin(unsorted_list_), std::end(unsorted_list_), rng);
+  partitioned_ = false;
+  go_ = true;
+  low_ = 0;
+  high_ = unsorted_list_.size() -1;
+  stack_.push(low_);
+  stack_.push(high_);
+}
+
 bool QuickSort::partition() {
   if (j_ <= high_ - 1) {
     height1_ = unsorted_list_[j_];

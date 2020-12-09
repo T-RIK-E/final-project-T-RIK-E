@@ -4,6 +4,8 @@
 
 #pragma once
 #include <vector>
+#include <algorithm>
+#include <random>
 
 namespace sorting {
 class Sort {
@@ -19,9 +21,9 @@ class Sort {
   const size_t GetHeight2() const;
   const std::string GetName() const;
   const size_t GetAccess() const;
-  void GenerateList();
  protected:
   void swap(size_t& a, size_t& b);
+  void GenerateList();
 
   std::vector<size_t> unsorted_list_;
   size_t height1_;

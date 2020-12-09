@@ -45,6 +45,13 @@ void MergeSort::SortOneStep() {
   }
 }
 
+void MergeSort::ReInitialize() {
+  auto rng = std::default_random_engine{};
+  std::shuffle(std::begin(unsorted_list_), std::end(unsorted_list_), rng);
+  SplitArray();
+  sorted_ = true;
+}
+
 void MergeSort::Merge() {
   if (i_ == left_.size() && j_ == right_.size()) {
     sorted_ = true;

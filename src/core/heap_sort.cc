@@ -43,6 +43,15 @@ void HeapSort::SortOneStep() {
   }
 }
 
+void HeapSort::ReInitialize() {
+  auto rng = std::default_random_engine{};
+  std::shuffle(std::begin(unsorted_list_), std::end(unsorted_list_), rng);
+  i_ = unsorted_list_.size() / 2 - 1;
+  stack_.push(i_--);
+  stack_.push(unsorted_list_.size());;
+  j_ = unsorted_list_.size() - 1;
+}
+
 bool HeapSort::Heapify() {
   // If left child is larger than root
   if (index_ < heap_size_ &&

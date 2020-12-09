@@ -11,6 +11,7 @@ class SelectionSort : public Sort {
   SelectionSort();
   explicit SelectionSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
+  void ReInitialize() override;
  private:
   int i_, j_, min_idx_;
 };

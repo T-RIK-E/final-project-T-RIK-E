@@ -11,6 +11,7 @@ class ShellSort : public Sort {
   ShellSort();
   explicit ShellSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
+  void ReInitialize() override;
  private:
   int gap_, i_, j_;
   int UpperBound(size_t num);

@@ -12,6 +12,7 @@ class HeapSort : public Sort {
   HeapSort();
   explicit HeapSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
+  void ReInitialize() override;
  private:
   std::stack<size_t> stack_;
   size_t heap_size_, root_, largest_, index_;

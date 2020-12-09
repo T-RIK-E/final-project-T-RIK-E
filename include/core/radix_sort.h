@@ -11,6 +11,7 @@ class RadixSort : public Sort {
   RadixSort() = default;
   explicit RadixSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
+  void ReInitialize() override;
  private:
 };
 }
