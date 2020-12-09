@@ -91,7 +91,7 @@ void SortingApp::keyDown(ci::app::KeyEvent event) {
       stopped_ = !stopped_;
       break;
     case ci::app::KeyEvent::KEY_r:
-      it_._Ptr->_Myval;
+      it_._Ptr->_Myval->ReInitialize();
       break;
   }
 }

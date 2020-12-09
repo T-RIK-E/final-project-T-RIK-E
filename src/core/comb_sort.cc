@@ -50,6 +50,7 @@ void CombSort::SortOneStep() {
 void CombSort::ReInitialize() {
   auto rng = std::default_random_engine{};
   std::shuffle(std::begin(unsorted_list_), std::end(unsorted_list_), rng);
+  access_ = 0;
   gap_ = unsorted_list_.size();
   swapped_ = false;
   go_ = true;
