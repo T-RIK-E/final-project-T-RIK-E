@@ -14,10 +14,15 @@ class QuickSort : public Sort {
   void SortOneStep() override;
   void ReInitialize() override;
  private:
+  /**
+   * Partition the array
+   * @return If partition is complete, return true
+   */
   bool partition();
   int high_, low_, pivot_;
   int i_, j_;
   bool partitioned_, go_;
+  // Stack of the parameters instead of recursively calling
   std::stack<size_t> stack_;
 };
-}
+} // namespace sorting

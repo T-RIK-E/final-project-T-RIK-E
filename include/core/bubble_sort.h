@@ -13,6 +13,7 @@ class BubbleSort : public Sort {
   void SortOneStep() override;
   void ReInitialize() override;
  private:
+  // i and j index when looping through as two for loops in real sort
   int i_, j_;
 };
-}
+} // namespace sorting

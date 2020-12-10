@@ -14,6 +14,12 @@ class ShellSort : public Sort {
   void ReInitialize() override;
  private:
   int gap_, i_, j_;
+
+  /**
+   * Changes the gap based on upper bound
+   * @param num the current gap
+   * @return the upper bound of the array list
+   */
   int UpperBound(size_t num);
 };
 }

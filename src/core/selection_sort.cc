@@ -32,6 +32,7 @@ void SelectionSort::SortOneStep() {
       }
       j_++;
     } else {
+      //Swap minimum and go to next i index loop
       swap(unsorted_list_[i_], unsorted_list_[min_idx_]);
       i_++;
       min_idx_ = i_;

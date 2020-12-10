@@ -13,10 +13,16 @@ class CombSort : public Sort {
   void SortOneStep() override;
   void ReInitialize() override;
  private:
+  // Gap to increment by
   size_t gap_;
+  // Index i
   size_t i_;
   bool swapped_;
   bool go_;
+
+  /**
+   * Get the next smaller gap to increment by.
+   */
   void GetNextGap();
 };
-}
+} // namespace sorting

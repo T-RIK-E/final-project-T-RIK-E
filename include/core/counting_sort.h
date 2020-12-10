@@ -15,6 +15,6 @@ class CountingSort : public Sort {
   std::vector<size_t> count_;
   std::vector<size_t> output_;
   size_t max_;
-  int i_, j_, k_, l_, m_;
+  int j_, k_, l_, m_;
 };
-}
+} // namespace sorting

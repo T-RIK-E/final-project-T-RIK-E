@@ -23,8 +23,11 @@ QuickSort::QuickSort(std::vector<size_t> unsorted_list)
 }
 
 void QuickSort::SortOneStep() {
+  // If stack is not empty and the list is not sorted
   if (go_ || !stack_.empty()) {
+    // If not partitioned
     if (!partitioned_) {
+      // Add new parameters to the stack
       high_ = stack_.top();
       stack_.pop();
       low_ = stack_.top();
@@ -36,7 +39,8 @@ void QuickSort::SortOneStep() {
       go_ = true;
       partitioned_ = !partitioned_;
     } else if (partition()) {
-
+      // Once partitioned, add new parameters to the stack for
+      // recursive calling
       if (pivot_ - 1 > low_) {
         stack_.push(low_);
         stack_.push(pivot_ - 1);
@@ -46,6 +50,7 @@ void QuickSort::SortOneStep() {
         stack_.push(pivot_ + 1);
         stack_.push(high_);
       } else if (pivot_ - 1 <= low_) {
+        // If sort is at the end, go is false.
         go_ = false;
       }
       partitioned_ = !partitioned_;
@@ -66,6 +71,8 @@ void QuickSort::ReInitialize() {
 }
 
 bool QuickSort::partition() {
+  // Partition the array in the same manner, except the for loop has been
+  // made linear
   if (j_ <= high_ - 1) {
     height1_ = unsorted_list_[j_];
     height2_ = unsorted_list_[high_];

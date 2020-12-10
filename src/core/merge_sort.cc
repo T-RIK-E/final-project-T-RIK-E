@@ -17,7 +17,9 @@ MergeSort::MergeSort(std::vector<size_t> unsorted_list)
 }
 
 void MergeSort::SortOneStep() {
-  if (indexes_.size() > 0 && sorted_) {
+  // If queue contains sub arrays and previous sub array is sorted
+  if (!indexes_.empty() && sorted_) {
+    // Get new array indices
     size_t low = indexes_.front();
     indexes_.pop();
     size_t mid = indexes_.front();
@@ -25,6 +27,7 @@ void MergeSort::SortOneStep() {
     size_t high = indexes_.front();
     indexes_.pop();
 
+    // Resize the left and right sub arrays and copy from unsorted_list_
     left_.resize(mid - low + 1);
     right_.resize(high - mid);
 
@@ -41,6 +44,7 @@ void MergeSort::SortOneStep() {
     k_ = low;
     sorted_ = false;
   } else if (!sorted_) {
+    // If not sorted, sort the subarray
     Merge();
   }
 }
@@ -54,18 +58,23 @@ void MergeSort::ReInitialize() {
 }
 
 void MergeSort::Merge() {
+  // If the i and j are at the end, then arrays have been merged
   if (i_ == left_.size() && j_ == right_.size()) {
     sorted_ = true;
+  // If right elements only remain, add to larger array
   } else if (i_ == left_.size()) {
     height2_ = right_[j_];
     unsorted_list_[k_++] = right_[j_++];
+  // If left elements only remain, add to larger array
   } else if (j_ == right_.size()) {
     height1_ = left_[i_];
     unsorted_list_[k_++] = left_[i_++];
+  // If right element is larger than left, then left element first
   } else if (left_[i_] < right_[j_]) {
     height1_ = left_[i_];
     height2_ = right_[j_];
     unsorted_list_[k_++] = left_[i_++];
+  // Else add right element.
   } else {
     unsorted_list_[k_++] = right_[j_++];
   }
