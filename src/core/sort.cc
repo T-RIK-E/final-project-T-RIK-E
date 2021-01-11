@@ -19,4 +19,10 @@ const size_t Sort::GetHeight1() const {
 const size_t Sort::GetHeight2() const {
   return height2_;
 }
+
+void Sort::swap(size_t& a, size_t& b) {
+  size_t temp = a;
+  a = b;
+  b = temp;
+}
 }  // namespace sorting

@@ -25,4 +25,4 @@ class Container {
   size_t pixels_x_;
   size_t pixels_y_;
 };
-}
+}  // namespace sorting

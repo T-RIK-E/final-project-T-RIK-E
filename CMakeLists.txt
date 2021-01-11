@@ -50,12 +50,22 @@ get_filename_component(APP_PATH "${CMAKE_CURRENT_SOURCE_DIR}/" ABSOLUTE)
 include("${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake")
 
 list(APPEND CORE_SOURCE_FILES
+        src/core/sort.cc
         src/core/insertion_sort.cc
-        src/core/sort.cc)
+        src/core/selection_sort.cc
+        src/core/bubble_sort.cc
+        src/core/quick_sort.cc
+        src/core/merge_sort.cc
+        src/core/heap_sort.cc
+        src/core/counting_sort.cc
+        src/core/radix_sort.cc
+        src/core/comb_sort.cc
+        src/core/shell_sort.cc)
 
 list(APPEND SOURCE_FILES    ${CORE_SOURCE_FILES}
         src/visualizer/sorting_visualizer_app.cc
-        src/visualizer/container.cc)
+        src/visualizer/container.cc
+        src/visualizer/algorithms.cc)
 
 list(APPEND TEST_FILES tests/test_main.cc
         tests/test_insertion_sort.cc)
