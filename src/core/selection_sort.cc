@@ -5,8 +5,15 @@
 #include <core/selection_sort.h>
 
 namespace sorting {
+SelectionSort::SelectionSort() : Sort() {
+  name_ = "Selection Sort";
+  i_ = 0;
+  min_idx_ = i_;
+  j_ = i_ + 1;
+}
 SelectionSort::SelectionSort(std::vector<size_t> unsorted_list)
     : Sort(std::move(unsorted_list)) {
+  name_ = "Selection Sort";
   i_ = 0;
   min_idx_ = i_;
   j_ = i_ + 1;
@@ -20,18 +27,26 @@ void SelectionSort::SortOneStep() {
     if (j_ < static_cast<int>(unsorted_list_.size())) {
       height2_ = unsorted_list_[j_];
       if (unsorted_list_[j_] < unsorted_list_[min_idx_]) {
+        access_+=2;
         min_idx_ = j_;
       }
       j_++;
     } else {
-      int temp = unsorted_list_[i_];
-      unsorted_list_[i_] = unsorted_list_[min_idx_];
-      unsorted_list_[min_idx_] = temp;
-
+      //Swap minimum and go to next i index loop
+      swap(unsorted_list_[i_], unsorted_list_[min_idx_]);
       i_++;
       min_idx_ = i_;
       j_ = i_ + 1;
     }
   }
+}
+
+void SelectionSort::ReInitialize() {
+  auto rng = std::default_random_engine{};
+  std::shuffle(std::begin(unsorted_list_), std::end(unsorted_list_), rng);
+  access_ = 0;
+  i_ = 0;
+  min_idx_ = i_;
+  j_ = i_ + 1;
 }
 }  // namespace sorting

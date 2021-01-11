@@ -8,8 +8,10 @@
 namespace sorting {
 class RadixSort : public Sort {
  public:
-  RadixSort(std::vector<size_t> unsorted_list);
+  RadixSort() = default;
+  explicit RadixSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
+  void ReInitialize() override;
  private:
 };
 }

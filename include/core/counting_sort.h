@@ -7,12 +7,14 @@
 namespace sorting {
 class CountingSort : public Sort {
  public:
+  CountingSort();
   explicit CountingSort(std::vector<size_t> unsorted_list);
   void SortOneStep() override;
+  void ReInitialize() override;
  private:
   std::vector<size_t> count_;
   std::vector<size_t> output_;
   size_t max_;
-  int i_, j_, k_, l_, m_;
+  int j_, k_, l_, m_;
 };
-}
+} // namespace sorting
